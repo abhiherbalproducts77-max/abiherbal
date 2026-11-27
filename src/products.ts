@@ -12,13 +12,16 @@ export type Product = {
   }[];
 };
 
+const productImage = (filename: string) =>
+  `${import.meta.env.BASE_URL}images/${filename}`;
+
 export const products: Product[] = [
   {
     slug: "sandal-powder-face-pack",
     name: "Sandal Powder Face Pack",
     category: "Skin care",
     description: "A face pack made with pure sandal powder.",
-    image: "/images/face-pack-sandal.png",
+    image: productImage("face-pack-sandal.png"),
     imageAlt: "Sandal powder and sandalwood pieces in a bowl",
     code: "SRGFP – Sandal 1",
   },
@@ -27,7 +30,7 @@ export const products: Product[] = [
     name: "Saffron Mixed Face Pack",
     category: "Skin care",
     description: "Face pack powder blended with saffron.",
-    image: "/images/face-pack-saffron.png",
+    image: productImage("face-pack-saffron.png"),
     imageAlt: "Face pack powder with saffron threads and sandalwood",
     code: "SRGFP – Saff 1",
   },
@@ -36,7 +39,7 @@ export const products: Product[] = [
     name: "Multani Mitti Face Pack",
     category: "Skin care",
     description: "A traditional Multani Mitti powder face pack.",
-    image: "/images/face-pack-multani.png",
+    image: productImage("face-pack-multani.png"),
     imageAlt: "Multani Mitti powder and a prepared face pack",
     code: "SRGFP – MULFP 1",
   },
@@ -45,7 +48,7 @@ export const products: Product[] = [
     name: "Raw Rice Powder Face Pack",
     category: "Skin care",
     description: "A face pack made with organic raw rice powder.",
-    image: "/images/face-pack-rice.png",
+    image: productImage("face-pack-rice.png"),
     imageAlt: "Face powder jars arranged together",
     code: "SRGFP – RRFP 1",
   },
@@ -54,7 +57,7 @@ export const products: Product[] = [
     name: "Abi Herbal Hair Oil",
     category: "Hair care",
     description: "Herbal hair oil for scalp massage and your hair-care routine.",
-    image: "/images/herbal-hair-oil.jpeg",
+    image: productImage("herbal-hair-oil.jpeg"),
     imageAlt: "Bottle of Abi Herbals hair oil",
     usage: [
       {
@@ -73,7 +76,7 @@ export const products: Product[] = [
     name: "Shikakai Powder",
     category: "Hair care",
     description: "A traditional powder for hair cleansing or a hair mask.",
-    image: "/images/shikakai-powder.jpeg",
+    image: productImage("shikakai-powder.jpeg"),
     imageAlt: "Abi Herbals Shikakai powder pouch",
     usage: [
       {
@@ -99,7 +102,7 @@ export const products: Product[] = [
     category: "Skin care",
     description:
       "An oil cleanser to massage onto skin and wipe away with a warm, damp cloth.",
-    image: "/images/face-cleansing-oil.jpeg",
+    image: productImage("face-cleansing-oil.jpeg"),
     imageAlt: "Bottle of Abi Herbals face cleansing oil",
     usage: [
       {
@@ -117,7 +120,7 @@ export const products: Product[] = [
     name: "Bathing Powder",
     category: "Bath & body",
     description: "A herbal cleansing powder for your bath-time routine.",
-    image: "/images/bathing-powder.jpeg",
+    image: productImage("bathing-powder.jpeg"),
     imageAlt: "Abi Herbals bathing powder pouch",
     usage: [
       {
